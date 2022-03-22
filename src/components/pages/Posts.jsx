@@ -1,4 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import MyButton from '../UI/button/MyButton';
+import MyModal from '../UI/modal/MyModal';
+import PostForm from '../PostForm';
+import PostList from '../PostList';
+import PostFilter from '../PostFilter';
+import Pagination from '../UI/pagination/Pagination';
+import Loader from '../UI/Loader/Loader';
+import { useFetching } from '../../hooks/useFetching';
+import { usePosts } from '../../hooks/usePosts';
+import PostService from '../../API/PostService';
+import { getPageCount } from '../../utils/pages';
 function Posts() {
   const [posts, setPosts] = useState([]);
   const [filter, setFilter] = useState({ sort: '', query: '' });
