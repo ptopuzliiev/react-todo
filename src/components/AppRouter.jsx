@@ -14,7 +14,7 @@ const AppRouter = () => {
           key={route.path}
           path={route.path}
           element={<route.component />}
-          exect={route.exect}
+          exact={route.exact}
         />
       ))}
     </Routes>
@@ -25,7 +25,7 @@ const AppRouter = () => {
           key={route.path}
           path={route.path}
           element={<route.component />}
-          exect={route.exect}
+          exact={route.exact}
         />
       ))}
     </Routes>
